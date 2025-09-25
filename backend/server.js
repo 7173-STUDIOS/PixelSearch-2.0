@@ -1,4 +1,3 @@
-// backend/server.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -13,16 +12,17 @@ app.use(bodyParser.json());
 app.post('/pixelai', (req, res) => {
     const { query } = req.body;
 
-    // Here you can replace this with a real AI API call
-    const response = `PixelAI says: You asked "${query}". This is a placeholder response!`;
+    // Simple AI: basic responses
+    let response = '';
+    if(query.toLowerCase().includes('hello')){
+        response = "Hello! I'm PixelAI, your 7173 STUDIOS assistant.";
+    } else if(query.toLowerCase().includes('pixelium')){
+        response = "Pixelium is your custom browser!";
+    } else {
+        response = `PixelAI received: "${query}"`;
+    }
 
     res.json({ response });
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`PixelAI server running at http://localhost:${PORT}`);
-
-    app.get('/', (req, res) => {
-  res.send('PixelAI server is running!');
-});
+app.listen(PORT, () => console.log(`PixelAI server running at http://localhost:${PORT}`));
