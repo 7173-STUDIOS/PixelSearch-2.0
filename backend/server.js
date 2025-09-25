@@ -5,7 +5,7 @@ app.post('/search', async (req, res) => {
         const response = await axios.get('https://serpapi.com/search.json', {
             params: {
                 q: query,
-                api_key: "YOUR_SCRAPERAPI_KEY",
+                const SCRAPER_API_KEY = "0903e6c63facdc6807e7c10b6f21ef4f"; // safe in backend
                 engine: "google"  // ensure JSON structured results
             }
         });
