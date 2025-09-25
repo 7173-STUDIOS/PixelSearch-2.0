@@ -22,4 +22,7 @@ app.post('/pixelai', (req, res) => {
 // Start the server
 app.listen(PORT, () => {
     console.log(`PixelAI server running at http://localhost:${PORT}`);
+
+    app.get('/', (req, res) => {
+  res.send('PixelAI server is running!');
 });
