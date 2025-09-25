@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelSearch 2.0</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <h1>PixelSearch 2.0</h1>
+  <form id="search-form" action="search.html" method="GET">
+    <input type="text" name="q" placeholder="Search Pixelium..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="pixelAI-container">
+    <h2>PixelAI</h2>
+    <textarea id="pixelAI-input" placeholder="Ask PixelAI something..."></textarea>
+    <button id="pixelAI-submit">Ask</button>
+    <div id="pixelAI-response"></div>
+  </div>
+
+<script src="js/main.js"></script>
+<script src="js/pixelAI.js"></script>
+</body>
+</html>
